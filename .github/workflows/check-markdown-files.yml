@@ -4,13 +4,13 @@ on:
   pull_request:
     paths:
     - '**.md'
-    - '.github/workflows/check-markdown-files.yaml'
+    - '.github/workflows/check-markdown-files.yml'
   push:
     branches:
     - 'main'
     paths:
     - '**.md'
-    - '.github/workflows/check-markdown-files.yaml'
+    - '.github/workflows/check-markdown-files.yml'
 
 jobs:
   lint-markdown:
