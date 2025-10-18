@@ -86,17 +86,17 @@ Where `<FILE>` is the filename you want to check.
 In case of errors, you will have an output similar to the following.
 
 ```shell
-gilberto@margot playground-gemini-cli % markdownlint-cli2 --config .markdownlint.json GEMINI.md
+gilberto@margot playground-gemini-cli % markdownlint-cli2 --config .markdownlint.json AGENTS.md
 markdownlint-cli2 v0.18.1 (markdownlint v0.38.0)
-Finding: GEMINI.md
+Finding: AGENTS.md
 Linting: 1 file(s)
 Summary: 2 error(s)
-GEMINI.md:22 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
-GEMINI.md:23 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 3]
+AGENTS.md:22 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]
+AGENTS.md:23 MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 3]
 ```
 
 The errors show the violated rule (e.g., `MD012`) and the line where it is
-violated (e.g., line 22 in `GEMINI.md`). You can use this information to fix
+violated (e.g., line 22 in `AGENTS.md`). You can use this information to fix
 the problem.
 
 ## References
