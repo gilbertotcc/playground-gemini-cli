@@ -30,6 +30,10 @@
         "Authorization": "Bearer ${GITHUB_PAT}"
       },
       "timeout": 5000
+    },
+    "notion": {
+      "command": "npx",
+      "args": [ "-y", "mcp-remote", "https://mcp.notion.com/mcp" ]
     }
   }
 }
