@@ -2,7 +2,8 @@
   "general": {
     "checkpointing": {
       "enabled": true
-    }
+    },
+    "contextFileName": "AGENTS.md"
   },
   "security": {
     "auth": {
