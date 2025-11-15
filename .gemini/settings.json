@@ -15,10 +15,6 @@
   "ui": {
     "theme": "Default"
   },
-  "ignore": [
-    ".git/**",
-    ".github/**"
-  ],
   "mcpServers": {
     "atlassian": {
       "command": "npx",
@@ -48,5 +44,10 @@
       "command": "npx",
       "args": [ "-y", "mcp-remote", "https://mcp.notion.com/mcp" ]
     }
+  },
+  "telemetry": {
+    "enabled": true,
+    "target": "local",
+    "otlpEndpoint": "http://localhost:4317"
   }
 }
