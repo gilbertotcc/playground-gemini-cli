@@ -39,6 +39,24 @@ Create a `.env` file in the project root and define these variables.
   For local usage, set `WORKSPACE_MCP_BASE_URI` to `http://localhost>` and
   `WORKSPACE_MCP_PORT` to `8000`.
 
+## Observability
+
+[Gemini CLI Tutorial Series : Part 13 : Gemini CLI Observability](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-13-gemini-cli-observability-c410806bc112)
+explains how Gemini CLI implements observability.
+In this project, Gemini CLI is configured to export logs and metrics to a local
+OpenTelemetry server.
+
+To use this feature, run the
+[Docker OpenTelemetry LGTM](https://grafana.com/docs/opentelemetry/docker-lgtm/)
+with the following command:
+
+```sh
+docker run -p 3000:3000 -p 4317:4317 -p 4318:4318 --rm -ti grafana/otel-lgtm
+```
+
+This command starts several services, including Grafana, which is available at
+<http://localhost:3000/>.
+
 ## References
 
 * [Gemini CLI GitHub](https://github.com/google-gemini/gemini-cli)
