@@ -46,7 +46,9 @@ explains how Gemini CLI implements observability.
 In this project, Gemini CLI is configured to export logs and metrics to a local
 OpenTelemetry server.
 
-To use this feature, run the
+To use this feature, enable it in `.gemini/settings.json`, by setting
+`telemetry.enabled` to `true`.
+Then run the
 [Docker OpenTelemetry LGTM](https://grafana.com/docs/opentelemetry/docker-lgtm/)
 with the following command:
 
@@ -56,6 +58,9 @@ docker run -p 3000:3000 -p 4317:4317 -p 4318:4318 --rm -ti grafana/otel-lgtm
 
 This command starts several services, including Grafana, which is available at
 <http://localhost:3000/>.
+
+**Note:** Telemetry is disabled by default because it raises errors if Gemini
+CLI cannot connect to the OTel endpoints.
 
 ## References
 

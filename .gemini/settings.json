@@ -46,7 +46,7 @@
     }
   },
   "telemetry": {
-    "enabled": true,
+    "enabled": false,
     "target": "local",
     "otlpEndpoint": "http://localhost:4317"
   }
