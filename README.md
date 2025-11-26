@@ -26,18 +26,6 @@ Create a `.env` file in the project root and define these variables.
   For more information on creating a token, please refer to the GitHub
   documentation on
   [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
-* `GOOGLE_OAUTH_CLIENT_ID`, `GOOGLE_OAUTH_CLIENT_SECRET`. Google OAuth2
-  credentials to interact with any Google API.
-  For more information on creating these credentials, please refer to the
-  [Google Cloud documentation](https://developers.google.com/workspace/guides/create-credentials).
-* `OAUTHLIB_INSECURE_TRANSPORT`. This variable enables OAuthlib to work with
-  HTTP callbacks, which is useful for local development.
-  It is not recommended for production environments.
-* `WORKSPACE_MCP_BASE_URI`, `WORKSPACE_MCP_PORT`. These variables are used to
-  configure the Google Workspace MCP server.
-  The base URI is the server address, and the port is the port number.
-  For local usage, set `WORKSPACE_MCP_BASE_URI` to `http://localhost>` and
-  `WORKSPACE_MCP_PORT` to `8000`.
 
 ## Observability
 
@@ -71,5 +59,4 @@ CLI cannot connect to the OTel endpoints.
 
 * [Getting started with the Atlassian Rovo MCP Server](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/)
 * [GitHub MCP Server](https://github.com/github/github-mcp-server)
-* [Google Workspace MCP Server](https://github.com/taylorwilsdon/google_workspace_mcp)
 * [Notion MCP](https://developers.notion.com/docs/mcp)
