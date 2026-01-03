@@ -53,6 +53,19 @@ following principles:
 
 ## Guidelines
 
+### Hard requirements
+
+* **Personal Identifiable Information (PII).** Given that this repository has
+  public visibility, it must not contain any Personal Identifiable Information.
+  You must guarantee that this type of information will not be added to the
+  content in this repository.
+
+## General
+
+* **Context7.** Always use Context7 MCP when you need library/API documentation,
+  code generation, setup or configuration steps without me having to explicitly
+  ask.
+
 ### Markdown style
 
 Markdown files within this project, with no exceptions, must follow
