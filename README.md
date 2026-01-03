@@ -13,42 +13,30 @@ To set up the project, install Gemini CLI using the official
 [Quick Install](https://github.com/google-gemini/gemini-cli?tab=readme-ov-file#quick-install)
 guide.
 
-Furthermore, to take full advantage of AI and use configured MCP servers (see
-the file `.gemini/settings.json`), you may need to set the following environment
-variables.
+Next, configure the following environment variables in a `.env` file.
 
-(Gemini CLI supports `.env` files, and it is strongly recommended to use them to
-define the following variables.)
-
-Create a `.env` file in the project root and define these variables.
-
-* `GITHUB_PAT`. GitHub Personal Access Token to interact with the GitHub API.
-  For more information on creating a token, please refer to the GitHub
-  documentation on
-  [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+* `GOOGLE_APPLICATION_CREDENTIALS`. Path to the service account JSON token used
+  for sending logs and metrics to Google Cloud Platform.
+* `GITHUB_PAT`. GitHub Personal Access Token to enable interaction with the
+  GitHub API.
+  For details on creating a token, refer to the GitHub documentation on
+  [Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
 
 ## Observability
 
-[Gemini CLI Tutorial Series : Part 13 : Gemini CLI Observability](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-13-gemini-cli-observability-c410806bc112)
-explains how Gemini CLI implements observability.
-In this project, Gemini CLI is configured to export logs and metrics to a local
-OpenTelemetry server.
+This project provides observability for the Gemini CLI by sending logs and
+metrics to Google Cloud Platform.
+To enable this, set the environment variable `GOOGLE_APPLICATION_CREDENTIALS` in
+the `.env` file to your GCP service account JSON token.
 
-To use this feature, enable it in `.gemini/settings.json`, by setting
-`telemetry.enabled` to `true`.
-Then run the
+The configuration follows the guidelines in
+[Gemini CLI Tutorial Series : Part 13 : Gemini CLI Observability](https://medium.com/google-cloud/gemini-cli-tutorial-series-part-13-gemini-cli-observability-c410806bc112).
+To disable observability, set `telemetry.enabled` to `false` in
+`.gemini/settings.json`.
+
+To test this feature locally, run the
 [Docker OpenTelemetry LGTM](https://grafana.com/docs/opentelemetry/docker-lgtm/)
-with the following command:
-
-```sh
-docker run -p 3000:3000 -p 4317:4317 -p 4318:4318 --rm -ti grafana/otel-lgtm
-```
-
-This command starts several services, including Grafana, which is available at
-<http://localhost:3000/>.
-
-**Note:** Telemetry is disabled by default because it raises errors if Gemini
-CLI cannot connect to the OTel endpoints.
+container and update the configuration to reference it.
 
 ## References
 

@@ -7,11 +7,6 @@
   "context": {
     "fileName": "AGENTS.md"
   },
-  "security": {
-    "auth": {
-      "selectedType": "oauth-personal"
-    }
-  },
   "ui": {
     "theme": "Default"
   },
@@ -33,8 +28,7 @@
     }
   },
   "telemetry": {
-    "enabled": false,
-    "target": "local",
-    "otlpEndpoint": "http://localhost:4317"
+    "enabled": true,
+    "target": "gcp"
   }
 }
