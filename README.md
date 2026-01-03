@@ -15,6 +15,8 @@ guide.
 
 Next, configure the following environment variables in a `.env` file.
 
+* `CONTEXT7_API_KEY`. [Context7](https://context7.com/) API key used by the
+  Context7 MCP server.
 * `GOOGLE_APPLICATION_CREDENTIALS`. Path to the service account JSON token used
   for sending logs and metrics to Google Cloud Platform.
 * `GITHUB_PAT`. GitHub Personal Access Token to enable interaction with the
